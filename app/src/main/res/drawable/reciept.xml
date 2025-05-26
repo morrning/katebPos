@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="382dp"
+    android:height="400dp"
+    android:viewportWidth="382"
+    android:viewportHeight="400">
+    
+    <!-- پس‌زمینه سفید -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0h382v400h-382z" />
+    
+    <!-- خط بالایی -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M20,40h342" />
+    
+    <!-- عنوان -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M141,80h100v20h-100z" />
+    
+    <!-- خط زیر عنوان -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M20,120h342" />
+    
+    <!-- متن تست -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,160h342v20h-342z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,200h342v20h-342z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,240h342v20h-342z" />
+    
+    <!-- خط پایینی -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M20,280h342" />
+    
+    <!-- لوگو -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M141,320h100v20h-100z" />
+    
+    <!-- خط پایانی -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M20,360h342" />
+</vector> 

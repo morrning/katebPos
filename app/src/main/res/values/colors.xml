@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- رنگ‌های اصلی برنامه -->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#03A9F4</color>
+
+    <!-- رنگ‌های دکمه‌ها -->
+    <color name="colorPersons">#2196F3</color>
+    <color name="colorProducts">#4CAF50</color>
+    <color name="colorCashRegister">#FF9800</color>
+    <color name="colorNewInvoice">#E91E63</color>
+    <color name="colorReports">#9C27B0</color>
+
+    <!-- رنگ‌های عمومی -->
+    <color name="black">#000000</color>
+    <color name="gray">#757575</color>
+    <color name="lightGray">#EEEEEE</color>
+    <color name="background">#F5F5F5</color>
+
+    <color name="primary_teal">#0288D1</color>
+    <color name="secondary_teal">#4FC3F7</color>
+    <color name="dark_teal">#01579B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primary_silver">#C0C0C0</color>
+    <color name="secondary_silver">#E0E0E0</color>
+    <color name="dark_silver">#808080</color>
+    <color name="light_background">#F5F5F5</color>
+    <color name="input_background">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="border_color">#E0E0E0</color>
+    <color name="button_pressed">#A0A0A0</color>
+</resources>

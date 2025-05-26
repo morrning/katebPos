@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_teal</item>
+        <item name="colorPrimaryVariant">@color/dark_teal</item>
+        <item name="colorSecondary">@color/secondary_teal</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+        <item name="android:fontFamily">@font/vazir_regular</item>
+        <item name="fontFamily">@font/vazir_regular</item>
+    </style>
+    
+    <style name="PersianNumberStyle">
+        <item name="android:fontFamily">@font/vazir</item>
+        <item name="android:fontFeatureSettings">"ss01"</item>
+    </style>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_businesses"
+            android:icon="@drawable/ic_business"
+            android:title="کسب و کارها" />
+        <item
+            android:id="@+id/nav_new_business"
+            android:icon="@drawable/ic_add_business"
+            android:title="کسب و کار جدید" />
+    </group>
+    
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/ic_password"
+            android:title="تغییر کلمه عبور" />
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/ic_support"
+            android:title="پشتیبانی" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info"
+            android:title="درباره ما" />
+        <item
+            android:id="@+id/nav_printer_test"
+            android:icon="@drawable/ic_printer"
+            android:title="آزمایش چاپگر" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="خروج" />
+    </group>
+</menu> 

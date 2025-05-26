@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="200"
+    android:viewportHeight="100">
+
+    <!-- پس‌زمینه -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0h200v100h-200z" />
+
+    <!-- لوگو -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M50,20 L150,20 L150,80 L50,80 Z" />
+
+    <!-- متن -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M60,40 L140,40 M60,60 L140,60" />
+
+</vector> 

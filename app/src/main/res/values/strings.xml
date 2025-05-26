@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">کاتب پوز</string>
+    <string name="login_title">Login to Kateb</string>
+    <string name="phone_number_hint">Phone Number</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_text">Login</string>
+    <string name="save_button_text">Save</string>
+    <string name="token_saved_message">Token Saved</string>
+    <string name="aoth_token_label">Auth token</string>
+    <string name="enter_token_hint">Auth token</string>
+    <string name="navigation_drawer_open">باز کردن منو</string>
+    <string name="navigation_drawer_close">بستن منو</string>
+    <string name="bid_name">نام کسب‌وکار</string>
+    <string name="bid_oner">صاحب کسب‌وکار</string>
+    <string name="my_bid">کسب‌وکارهای من</string>
+    <string name="user_example_com">user@example.com</string>
+    <string name="user_fullname">نام کاربر</string>
+    <string name="change_password">تغییر کلمه عبور</string>
+    <string name="exit">خروج</string>
+    <string name="support">پشتیبانی</string>
+    <string name="businesses">کسب و کارها</string>
+    <string name="new_business">کسب و کار جدید</string>
+</resources>

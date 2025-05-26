@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">کاتب</string>
+    <string name="login_title">ورود به کاتب</string>
+    <string name="phone_number_hint">شماره تلفن</string>
+    <string name="password_hint">کلمه عبور</string>
+    <string name="login_button_text">ورود</string>
+    <string name="aoth_token_label">شناسه ورود</string>
+    <string name="enter_token_hint">ورود توکن</string>
+    <string name="save_button_text">ذخیره</string>
+    <string name="token_saved_message">توکن ورود ذخیره شد</string>
+    <string name="navigation_drawer_open">منو امکانات</string>
+    <string name="navigation_drawer_close">منو امکانات</string>
+    <string name="bid_name">نام کسب‌وکار</string>
+    <string name="my_bid">کسب‌وکارهای من</string>
+    <string name="change_password">تغییر کلمه عبور</string>
+</resources>

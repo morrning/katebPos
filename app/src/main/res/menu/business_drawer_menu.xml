@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="داشبورد" />
+        <item
+            android:id="@+id/nav_persons"
+            android:icon="@drawable/ic_person"
+            android:title="اشخاص" />
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_inventory"
+            android:title="کالاها" />
+        <item
+            android:id="@+id/nav_cash_register"
+            android:icon="@drawable/ic_point_of_sale"
+            android:title="صندوق" />
+        <item
+            android:id="@+id/nav_new_invoice"
+            android:icon="@drawable/ic_receipt_long"
+            android:title="فاکتور جدید" />
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/ic_assessment"
+            android:title="گزارشات" />
+    </group>
+
+    <item android:title="تنظیمات">
+        <menu>
+            <item
+                android:id="@+id/nav_change_password"
+                android:icon="@drawable/ic_lock"
+                android:title="تغییر کلمه عبور" />
+            <item
+                android:id="@+id/nav_support"
+                android:icon="@drawable/ic_support"
+                android:title="پشتیبانی" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info"
+                android:title="درباره ما" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="خروج" />
+        </menu>
+    </item>
+</menu> 
