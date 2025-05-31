@@ -74,7 +74,7 @@
                     android:backgroundTint="@color/secondary_silver"
                     android:fontFamily="@font/vazir_regular"
                     android:inputType="textPassword"
-                    android:text="652931651420"
+                    android:text="136431136431"
                     android:textColor="@color/text_primary"
                     style="@style/PersianNumberStyle" />
             </com.google.android.material.textfield.TextInputLayout>

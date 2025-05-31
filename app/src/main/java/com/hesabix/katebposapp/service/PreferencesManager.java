@@ -23,6 +23,9 @@ public class PreferencesManager {
     private static final String KEY_SELECTED_BUSINESS_UPDATE_SELL_PRICE = "selected_business_update_sell_price";
     private static final String KEY_SELECTED_BUSINESS_UPDATE_BUY_PRICE = "selected_business_update_buy_price";
     private static final String KEY_SELECTED_BUSINESS_PROFIT_CALC_TYPE = "selected_business_profit_calc_type";
+    private static final String KEY_ACTIVE_BUSINESS_ID = "active_business_id";
+    private static final String KEY_ACTIVE_MONEY = "active_money";
+    private static final String KEY_ACTIVE_YEAR = "active_year";
 
     private final SharedPreferences prefs;
 
@@ -248,5 +251,35 @@ public class PreferencesManager {
         SharedPreferences.Editor editor = prefs.edit();
         editor.clear();
         editor.apply();
+    }
+
+    public void setActiveBusinessId(int businessId) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(KEY_ACTIVE_BUSINESS_ID, businessId);
+        editor.apply();
+    }
+
+    public int getActiveBusinessId() {
+        return prefs.getInt(KEY_ACTIVE_BUSINESS_ID, -1);
+    }
+
+    public void setActiveMoney(int moneyId) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(KEY_ACTIVE_MONEY, moneyId);
+        editor.apply();
+    }
+
+    public int getActiveMoney() {
+        return prefs.getInt(KEY_ACTIVE_MONEY, -1);
+    }
+
+    public void setActiveYear(int yearId) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(KEY_ACTIVE_YEAR, yearId);
+        editor.apply();
+    }
+
+    public int getActiveYear() {
+        return prefs.getInt(KEY_ACTIVE_YEAR, -1);
     }
 }

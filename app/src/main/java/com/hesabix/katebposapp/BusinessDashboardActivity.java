@@ -22,6 +22,7 @@ import com.hesabix.katebposapp.service.PreferencesManager;
 import com.hesabix.katebposapp.retrofit.ApiService;
 import com.hesabix.katebposapp.retrofit.RetrofitClient;
 import com.hesabix.katebposapp.retrofit.UserInfo;
+import com.hesabix.katebposapp.model.BusinessInfo;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -48,7 +49,17 @@ public class BusinessDashboardActivity extends AppCompatActivity implements Navi
         // تنظیم منوی کشویی
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_persons) {
+                Intent intent = new Intent(BusinessDashboardActivity.this, PersonsActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawers();
+                return true;
+            }
+            // سایر گزینه‌های منو
+            return false;
+        });
 
         // اضافه کردن دکمه همبرگر به تولبار
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -86,6 +97,40 @@ public class BusinessDashboardActivity extends AppCompatActivity implements Navi
         TextView tvBusinessName = findViewById(R.id.tv_business_name);
         String businessName = preferencesManager.getSelectedBusinessName();
         tvBusinessName.setText(businessName);
+
+        // دریافت اطلاعات کسب و کار
+        int businessId = preferencesManager.getSelectedBusinessId();
+        if (businessId != -1) {
+            ApiService apiService = RetrofitClient.getInstance(this).create(ApiService.class);
+            Call<BusinessInfo> call = apiService.getBusinessInfo(businessId);
+            call.enqueue(new Callback<BusinessInfo>() {
+                @Override
+                public void onResponse(@NonNull Call<BusinessInfo> call, @NonNull Response<BusinessInfo> response) {
+                    if (response.isSuccessful() && response.body() != null) {
+                        BusinessInfo businessInfo = response.body();
+                        
+                        // ذخیره تنظیمات
+                        preferencesManager.setActiveBusinessId(businessInfo.getId());
+                        preferencesManager.setActiveMoney(businessInfo.getArzmain().getId());
+                        preferencesManager.setActiveYear(businessInfo.getYear().getId());
+                        
+                        // به‌روزرسانی اطلاعات در رابط کاربری
+                        tvBusinessName.setText(businessInfo.getName());
+                    } else {
+                        Toast.makeText(BusinessDashboardActivity.this,
+                            "خطا در دریافت اطلاعات کسب و کار: " + response.message(),
+                            Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(@NonNull Call<BusinessInfo> call, @NonNull Throwable t) {
+                    Toast.makeText(BusinessDashboardActivity.this,
+                        "خطا در اتصال: " + t.getMessage(),
+                        Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
     private void setupUserInfo() {
@@ -127,32 +172,41 @@ public class BusinessDashboardActivity extends AppCompatActivity implements Navi
     private void setupDashboardButtons() {
         // دکمه اشخاص
         findViewById(R.id.btn_persons).setOnClickListener(v -> {
-            Toast.makeText(this, "اشخاص", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه اشخاص
+            Intent intent = new Intent(BusinessDashboardActivity.this, PersonsActivity.class);
+            startActivity(intent);
         });
 
         // دکمه کالاها
         findViewById(R.id.btn_products).setOnClickListener(v -> {
-            Toast.makeText(this, "کالاها", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه کالاها
+            Intent intent = new Intent(BusinessDashboardActivity.this, ProductsActivity.class);
+            startActivity(intent);
         });
 
         // دکمه صندوق
         findViewById(R.id.btn_cash_register).setOnClickListener(v -> {
-            Toast.makeText(this, "صندوق", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه صندوق
+            Intent intent = new Intent(BusinessDashboardActivity.this, CashDesksActivity.class);
+            startActivity(intent);
+        });
+
+        // دکمه فاکتورها
+        findViewById(R.id.btn_invoices).setOnClickListener(v -> {
+            Intent intent = new Intent(BusinessDashboardActivity.this, InvoicesActivity.class);
+            startActivity(intent);
         });
 
         // دکمه فاکتور جدید
         findViewById(R.id.btn_new_invoice).setOnClickListener(v -> {
-            Toast.makeText(this, "فاکتور جدید", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه فاکتور جدید
+            Intent intent = new Intent(BusinessDashboardActivity.this, NewInvoiceActivity.class);
+            startActivity(intent);
         });
 
         // دکمه گزارشات
         findViewById(R.id.btn_reports).setOnClickListener(v -> {
-            Toast.makeText(this, "گزارشات", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه گزارشات
+            new AlertDialog.Builder(this)
+                .setTitle("هشدار")
+                .setMessage("چاپگر فعالی یافت نشد")
+                .setPositiveButton("باشه", null)
+                .show();
         });
     }
 
@@ -165,20 +219,24 @@ public class BusinessDashboardActivity extends AppCompatActivity implements Navi
             drawerLayout.closeDrawer(GravityCompat.START);
         } else if (id == R.id.nav_persons) {
             // باز کردن صفحه اشخاص
-            Toast.makeText(this, "اشخاص", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه اشخاص
+            Intent intent = new Intent(BusinessDashboardActivity.this, PersonsActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_products) {
             // باز کردن صفحه کالاها
-            Toast.makeText(this, "کالاها", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه کالاها
+            Intent intent = new Intent(BusinessDashboardActivity.this, ProductsActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_cash_register) {
             // باز کردن صفحه صندوق
-            Toast.makeText(this, "صندوق", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه صندوق
+            Intent intent = new Intent(BusinessDashboardActivity.this, CashDesksActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_invoices) {
+            // باز کردن صفحه فاکتورها
+            Intent intent = new Intent(BusinessDashboardActivity.this, InvoicesActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_new_invoice) {
             // باز کردن صفحه فاکتور جدید
-            Toast.makeText(this, "فاکتور جدید", Toast.LENGTH_SHORT).show();
-            // TODO: باز کردن صفحه فاکتور جدید
+            Intent intent = new Intent(BusinessDashboardActivity.this, NewInvoiceActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_reports) {
             // باز کردن صفحه گزارشات
             Toast.makeText(this, "گزارشات", Toast.LENGTH_SHORT).show();

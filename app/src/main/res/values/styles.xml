@@ -7,6 +7,9 @@
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
         <item name="android:fontFamily">@font/vazir_regular</item>
         <item name="fontFamily">@font/vazir_regular</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:textDirection">rtl</item>
+        <item name="android:textAlignment">viewStart</item>
     </style>
     
     <style name="PersianNumberStyle">

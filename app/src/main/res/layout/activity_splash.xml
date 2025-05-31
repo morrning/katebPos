@@ -51,8 +51,23 @@
         android:fontFamily="@font/vazir_regular"
         android:animation="@anim/fade_in"
         app:layout_constraintTop_toBottomOf="@id/progress_bar"
+        app:layout_constraintBottom_toTopOf="@id/retry_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تلاش مجدد"
+        android:visibility="gone"
+        android:backgroundTint="@color/primary_teal"
+        android:fontFamily="@font/vazir_regular"
+        app:layout_constraintTop_toBottomOf="@id/loading_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

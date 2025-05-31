@@ -8,8 +8,9 @@
     <!-- رنگ‌های دکمه‌ها -->
     <color name="colorPersons">#2196F3</color>
     <color name="colorProducts">#4CAF50</color>
-    <color name="colorCashRegister">#FF9800</color>
-    <color name="colorNewInvoice">#E91E63</color>
+    <color name="colorCashRegister">#4CAF50</color>
+    <color name="colorInvoices">#2196F3</color>
+    <color name="colorNewInvoice">#FF9800</color>
     <color name="colorReports">#9C27B0</color>
 
     <!-- رنگ‌های عمومی -->
@@ -31,4 +32,13 @@
     <color name="text_secondary">#757575</color>
     <color name="border_color">#E0E0E0</color>
     <color name="button_pressed">#A0A0A0</color>
+    <color name="error">#FFE53935</color>
+
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#FF4081</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
 </resources>

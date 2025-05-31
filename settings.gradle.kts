@@ -25,4 +25,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "katebPosApp"
 include(":app")
+include(":PersianMaterialDateTimePicker")
  

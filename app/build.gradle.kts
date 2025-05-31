@@ -55,4 +55,10 @@ dependencies {
     // SDK دستگاه پوز
     implementation(files("libs/smartpos-sdk-v1.2.12.2.aar"))
     implementation(libs.core)
+
+    // کتابخانه تاریخ شمسی
+    implementation(libs.persiandate)
+
+    // کتابخانه اسکن بارکد
+    implementation(libs.zxing.android.embedded)
 }

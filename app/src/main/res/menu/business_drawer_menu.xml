@@ -15,15 +15,19 @@
             android:title="کالاها" />
         <item
             android:id="@+id/nav_cash_register"
-            android:icon="@drawable/ic_point_of_sale"
+            android:icon="@drawable/ic_payment"
             android:title="صندوق" />
         <item
+            android:id="@+id/nav_invoices"
+            android:icon="@drawable/ic_receipt"
+            android:title="فاکتورها" />
+        <item
             android:id="@+id/nav_new_invoice"
-            android:icon="@drawable/ic_receipt_long"
+            android:icon="@drawable/ic_receipt"
             android:title="فاکتور جدید" />
         <item
             android:id="@+id/nav_reports"
-            android:icon="@drawable/ic_assessment"
+            android:icon="@drawable/ic_reports"
             android:title="گزارشات" />
     </group>
 
